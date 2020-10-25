@@ -19,12 +19,10 @@ let list = [
     name: "Replicar el eje del profe 4",
     done: false,
   },
-  {
-    id: 5,
-    name: "XXXX",
-    done: false,
+  
     
-  },
+    
+  
 ];
 
 const listContainer = document.querySelector("#list-content");
