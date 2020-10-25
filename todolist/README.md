@@ -7,7 +7,7 @@ an university todo list example
 1. Download the repository from github.
 2. Run your html in your browser.
 
-creacion de la rama develop
+creacion de la rama develop parasubir a github
 
 # Trabajo para miercoles 30 sep 2020
 

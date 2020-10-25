@@ -23,10 +23,7 @@ let list = [
     id: 5,
     name: "XXXX",
     done: false,
-
-    id: 6,
-    name: "XXXX",
-    done: false,
+    
   },
 ];
 
