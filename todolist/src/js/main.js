@@ -2,7 +2,7 @@ let list = [
   {
     id: 1,
     name: "Replicar el eje del profe",
-    done: true,
+    done: false,
   },
   {
     id: 2,
@@ -26,41 +26,32 @@ let list = [
   },
 ];
 
-const listContainer = document.querySelector("#list-content");
 
-paintList(list);
-
-function createTask(task) {
-  const input = document.querySelector("#inputTask");
-  list.push({
-    id: list.length + 1,
-    name: input.value,
-    done: false,
-  });
-  input.value = "";
-  paintList(list);
-}
-
-const checkTask = (checkbox, id) => {
-  const task = list.find((element) => {
-    return element.id === id;
-  });
-  task.done = checkbox.checked;
-  paintList(list);
-};
-
-function paintList(lst) {
-  let res = "";
-  lst.forEach((element) => {
-    res += renderListItem(element);
-  });
-  listContainer.innerHTML = res;
-}
-
-function renderListItem(item) {
-  const isDone = item.done ? "is-done" : "";
-  const checked = item.done ? "checked" : "";
-  return `<li class="list-group-item list-item ${isDone}">
-              <input type="checkbox" ${checked} aria-label="Checkbox for following text input" onclick="checkTask(this, ${item.id})"> ${item.name}
-          </li>`;
-}
+window.addEventListener('load', function(){
+  var app = new Vue({
+    el: '#todo-app',
+    data: {
+      title: 'What do I need to do today!',
+      list: list,
+      newTaskName: ''
+    },
+    computed: {
+      todoList(){
+        return this.list.filter((task) => !task.done);
+      },
+      doneList(){
+        return this.list.filter((task) => task.done);
+      }
+    },
+    methods: {
+      createTask(){
+        this.list.push({
+          id: list.length + 1,
+          name: this.newTaskName,
+          done: false,
+        });
+        this.newTaskName = ''
+      }
+    },
+  })
+});
