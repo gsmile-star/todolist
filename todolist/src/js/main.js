@@ -7,7 +7,7 @@ let list = [
   {
     id: 2,
     name: "Replicar el eje del profe 2",
-    done: false,
+    done: true,
   },
   {
     id: 3,
@@ -19,20 +19,39 @@ let list = [
     name: "Replicar el eje del profe 4",
     done: false,
   },
-];
-
-let done = [
   {
     id: 5,
     name: "XXXX",
-    done: true,
+    done: false,
   },
 ];
 
-const listContainer = document.querySelector("#list-todo");
-const listDoneContainer = document.querySelector("#list-done");
 
-paintAll();
+let listContainer;
+let listDoneContainer;;
+
+let options = {
+  group: 'todolist',
+  animation: 100,
+  onAdd: function(data){
+    if(data.to.id === 'list-done'){
+      console.log("done");
+    }else{
+      console.log("not done");
+    }
+    
+  }
+}
+
+window.addEventListener('load', function(){
+  alert()
+  listContainer = document.querySelector("#list-todo");
+  Sortable.create(listContainer, options);
+  listDoneContainer = document.querySelector("#list-done");
+  Sortable.create(listDoneContainer, options);
+  patinAll();
+});
+
 
 function createTask(task) {
   const input = document.querySelector("#inputTask");
@@ -42,42 +61,46 @@ function createTask(task) {
     done: false,
   });
   input.value = "";
-  paintList(list);
+  patinAll();
 }
 
 const checkTask = (checkbox, id) => {
-  const isChecked = checkbox.checked;
-  const originList = isChecked ? list : done;
-  const destinyList = isChecked ? done : list;
-
-  const taskIndex = originList.findIndex((element) => {
+  const task = list.find((element) => {
     return element.id === id;
   });
-  const task = originList.splice(taskIndex, 1)[0];
-  destinyList.push(task);
   task.done = checkbox.checked;
-  paintAll();
+  patinAll();
 };
 
-function paintAll() {
-  paintTodo();
-  paintDone();
+function patinAll() {
+  paintTodoList();
+  paintDoneList();
 }
 
-function paintTodo() {
-  paintList(list, listContainer);
+function paintTodoList() {
+  const todoList = getTodoList();
+  paintList(todoList, listContainer);
 }
 
-function paintDone() {
-  paintList(done, listDoneContainer);
+function getTodoList() {
+  return list.filter((task) => !task.done);
 }
 
-function paintList(lst, domContainer) {
+function paintDoneList() {
+  const doneList = getDoneList();
+  paintList(doneList, listDoneContainer);
+}
+
+function getDoneList() {
+  return list.filter((task) => task.done);
+}
+
+function paintList(lst, domList) {
   let res = "";
   lst.forEach((element) => {
     res += renderListItem(element);
   });
-  domContainer.innerHTML = res;
+  domList.innerHTML = res;
 }
 
 function renderListItem(item) {
