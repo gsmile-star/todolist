@@ -8,4 +8,4 @@ an university todo list example
 2. Run your html in your browser.
 
 ACTIVIDAD
-se hace la logica de kevin 
+Con la logica de kevin se muestra la cantidad de tareas relizadas y las que estan pendientes.

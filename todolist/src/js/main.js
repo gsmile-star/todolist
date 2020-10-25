@@ -26,32 +26,12 @@ let list = [
   },
 ];
 
+const listContainer = document.querySelector("#list-todo");
+const listDoneContainer = document.querySelector("#list-done");
 
-let listContainer;
-let listDoneContainer;;
 
-let options = {
-  group: 'todolist',
-  animation: 100,
-  onAdd: function(data){
-    if(data.to.id === 'list-done'){
-      console.log("done");
-    }else{
-      console.log("not done");
-    }
-    
-  }
-}
 
-window.addEventListener('load', function(){
-  alert()
-  listContainer = document.querySelector("#list-todo");
-  Sortable.create(listContainer, options);
-  listDoneContainer = document.querySelector("#list-done");
-  Sortable.create(listDoneContainer, options);
-  patinAll();
-});
-
+patinAll();
 
 function createTask(task) {
   const input = document.querySelector("#inputTask");
@@ -77,9 +57,14 @@ function patinAll() {
   paintDoneList();
 }
 
+
+
 function paintTodoList() {
   const todoList = getTodoList();
   paintList(todoList, listContainer);
+  const num1 = todoList.length;
+  const text1 = "Quantity = " + num1;
+  document.getElementById("Cant_Todo").innerHTML = text1;
 }
 
 function getTodoList() {
@@ -89,6 +74,9 @@ function getTodoList() {
 function paintDoneList() {
   const doneList = getDoneList();
   paintList(doneList, listDoneContainer);
+  const num2 = doneList.length;
+  const text2 = "Quantity = " + num2;
+  document.getElementById("Cant_Done").innerHTML = text2;
 }
 
 function getDoneList() {
@@ -102,6 +90,7 @@ function paintList(lst, domList) {
   });
   domList.innerHTML = res;
 }
+
 
 function renderListItem(item) {
   const isDone = item.done ? "is-done" : "";

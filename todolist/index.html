@@ -13,11 +13,10 @@
       crossorigin="anonymous"
     />
     <link href="./src/style/main.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
   </head>
-  <body onload="init">
+  <body>
     <div class="container">
-      <h1>What do I need to do today!!</h1>
+      <h1>What do I need to do today</h1>
 
       <div class="input-group mb-3">
         <input
@@ -36,10 +35,12 @@
       <div class="todolist row">
         <div class="col">
           <h2>Todo</h2>
+          <p id="Cant_Todo"></p>
           <ul class="list-group mylist" id="list-todo"></ul>
         </div>
         <div class="col">
           <h2>Done</h2>
+          <p id="Cant_Done"></p>
           <ul class="list-group mylist" id="list-done"></ul>
         </div>
       </div>
