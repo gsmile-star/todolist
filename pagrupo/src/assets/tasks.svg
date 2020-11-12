@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64px" height="79px" viewBox="0 0 64 79" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_tasks</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Features" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop" sketch:type="MSArtboardGroup" transform="translate(-491.000000, -288.000000)" fill="#E81E63">
+            <g id="Icons" sketch:type="MSLayerGroup" transform="translate(76.000000, 277.000000)">
+                <g id="ic_tasks" transform="translate(415.000000, 11.000000)" sketch:type="MSShapeGroup">
+                    <path d="M55.157,78.23 L9.102,78.23 C8.157,78.23 7.358,77.528 7.234,76.594 L0.408,24.567 C0.338,24.026 0.504,23.486 0.86,23.078 C1.217,22.673 1.735,22.438 2.276,22.438 L61.974,22.438 C62.515,22.438 63.033,22.673 63.39,23.078 C63.747,23.486 63.912,24.027 63.842,24.567 L57.025,76.594 C56.899,77.528 56.101,78.23 55.157,78.23 L55.157,78.23 Z M10.752,74.465 L53.505,74.465 L59.83,26.204 L4.424,26.204 L10.752,74.465 L10.752,74.465 Z" id="Fill-8"></path>
+                    <path d="M58.459,25.538 L54.723,25.045 L56.017,15.197 L8.267,15.197 L9.521,24.744 L5.785,25.236 L4.255,13.561 C4.185,13.02 4.35,12.479 4.707,12.071 C5.063,11.667 5.582,11.432 6.123,11.432 L58.164,11.432 C58.705,11.432 59.223,11.667 59.58,12.071 C59.937,12.479 60.102,13.024 60.032,13.561 L58.459,25.538" id="Fill-9"></path>
+                    <path d="M54.539,13.895 L50.802,13.403 L51.957,4.603 L12.326,4.603 L13.441,13.083 L9.704,13.575 L8.315,2.966 C8.245,2.425 8.41,1.885 8.767,1.477 C9.123,1.072 9.642,0.837 10.183,0.837 L54.105,0.837 C54.646,0.837 55.163,1.072 55.521,1.477 C55.877,1.885 56.043,2.426 55.973,2.966 L54.539,13.895" id="Fill-10"></path>
+                    <path d="M13.904,37.206 L50.354,37.206 L50.354,40.971 L13.904,40.971 L13.904,37.206 Z" id="Fill-11"></path>
+                    <path d="M13.904,48.143 L32.129,48.143 L32.129,51.908 L13.904,51.908 L13.904,48.143 Z" id="Fill-12"></path>
+                    <path d="M13.904,59.075 L39.822,59.075 L39.822,62.84 L13.904,62.84 L13.904,59.075 Z" id="Fill-13"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
